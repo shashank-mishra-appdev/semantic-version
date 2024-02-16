@@ -32,5 +32,6 @@
       }
     ]
   ],
-  "dryRun": false
+  "dryRun": false,
+  "ci": false
 }
