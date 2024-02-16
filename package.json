@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "release:semantic-release": "npx semantic-release",
     "test": "ng test",
     "prepare": "husky"
   },
@@ -28,6 +29,7 @@
     "@angular/cli": "^17.0.10",
     "@angular/compiler-cli": "^17.0.0",
     "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/jasmine": "~5.1.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
