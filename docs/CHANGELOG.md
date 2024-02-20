@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.0.0...v1.0.1) (2024-02-20)
+
+
+### Bug Fixes
+
+* added semantic release github plugin ([04ad85a](https://github.com/shashank-mishra-appdev/semantic-version/commit/04ad85a8a7ac013e14f0e7c426c205675b89e880))
+
 ## 1.0.0 (2024-02-16)
 
 
