@@ -6,6 +6,13 @@
 trigger:
 - main
 
+pr:
+  autoCancel: true
+  branches:
+    include:
+      - main
+  drafts: true
+
 pool:
   vmImage: ubuntu-latest
 
