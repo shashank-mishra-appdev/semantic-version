@@ -1,22 +1,69 @@
-# Node.js with Angular
-# Build a Node.js project that uses Angular.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
-
 trigger:
-- main
+  - main
+pr:
+  autoCancel: true
+  branches:
+    include:
+      - main
+  drafts: true
+stages:
+  - stage: Build
+    displayName: Build the web application
+    jobs:
+      - job: Build
+        displayName: Build job
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: 20.x
+            displayName: Install Node.js
+          - script: |
+              npm install -g @angular/cli
+              npm install
+              ng build --configuration production
+            displayName: Angular Build
+  - stage: Dev
+    displayName: Deploy to the dev environment
+    dependsOn: Build
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+    jobs:
+      - deployment: Deploy
+        environment: dev
+      - job: Build
+        displayName: Deploy to Dev
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: 20.x
+            displayName: Install Node.js
+          - script: |
+              npm install -g @angular/cli
+              npm install
+              ng build --configuration production
+            displayName: Angular Build
+  - stage: Staging
+    displayName: Deploy to the staging environment
+    dependsOn: Dev
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+    jobs:
+      - deployment: Deploy
+        environment: dev
+      - job: Build
+        displayName: Build job
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: 20.x
+            displayName: Install Node.js
+          - script: |
+              npm install -g @angular/cli
+              npm install
+              ng build --configuration production
+            displayName: npm install and build
 
-pool:
-  vmImage: ubuntu-latest
-
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
-
-- script: |
-    npm install -g @angular/cli
-    npm install
-    ng build --prod
-  displayName: 'npm install and build'
