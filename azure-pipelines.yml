@@ -25,10 +25,9 @@ stages:
               ng build --configuration production
             displayName: Angular Build
   - stage: Dev
-    condition: eq(variables['Build.SourceBranch'], 'refs/heads/main'))
     displayName: Deploy to the dev environment
     dependsOn: Build
-    condition: succeeded()
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
     jobs:
       - deployment: Deploy
         environment: dev
@@ -47,9 +46,9 @@ stages:
               ng build --configuration production
             displayName: Angular Build
   - stage: Staging
-    condition: eq(variables['Build.SourceBranch'], 'refs/heads/main'))
     displayName: Deploy to the staging environment
     dependsOn: Dev
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
     jobs:
       - deployment: Deploy
         environment: dev
