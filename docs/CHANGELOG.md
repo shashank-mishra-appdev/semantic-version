@@ -1,3 +1,10 @@
+## [1.3.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.2.0...v1.3.0) (2024-03-05)
+
+
+### Features
+
+* fixed version variables ([463ad94](https://github.com/shashank-mishra-appdev/semantic-version/commit/463ad94810f73491a78cc5a0f16ec90d76ae5b98))
+
 ## [1.2.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.1.0...v1.2.0) (2024-03-05)
 
 
