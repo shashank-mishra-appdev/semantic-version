@@ -74,5 +74,3 @@ stages:
               npm install
               ng build --configuration production
             displayName: npm install and build
-name: $(version)
-appendCommitMessageToRunName: false
