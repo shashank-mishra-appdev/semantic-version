@@ -1,3 +1,11 @@
+## [1.2.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.1.0...v1.2.0) (2024-03-05)
+
+
+### Features
+
+* removed redundant properties ([cb259d5](https://github.com/shashank-mishra-appdev/semantic-version/commit/cb259d5abc3fc86f5f3b8c815d88cf5c356fad53))
+* updated semantic ado version variable name ([8853fbe](https://github.com/shashank-mishra-appdev/semantic-version/commit/8853fbe96ab8e4765e087dfb182a854dcb21d3a4))
+
 ## [1.1.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.0.1...v1.1.0) (2024-03-05)
 
 
