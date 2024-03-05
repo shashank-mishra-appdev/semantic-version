@@ -1,3 +1,23 @@
+## [1.1.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.0.1...v1.1.0) (2024-03-05)
+
+
+### Features
+
+* added pr triggers to azure yaml ([1a4c177](https://github.com/shashank-mishra-appdev/semantic-version/commit/1a4c177dc37fb2081b23c3661bc9503f291a39a7))
+* installed semantic ado plugin ([1ddce18](https://github.com/shashank-mishra-appdev/semantic-version/commit/1ddce18de870cc24b5350fb591cb728c78beba7b))
+* updated github environment variables ordering ([882c569](https://github.com/shashank-mishra-appdev/semantic-version/commit/882c569acfd657f033944e512dde063dbb019b7d))
+
+
+### Bug Fixes
+
+* added comments ([865f5f1](https://github.com/shashank-mishra-appdev/semantic-version/commit/865f5f1a3ac662123823d2905434a9a418ad4abf))
+* added semantic-release task ([3d28b4f](https://github.com/shashank-mishra-appdev/semantic-version/commit/3d28b4f3ea5a2f1157208adde893f03cbf79d317))
+* adjusted conditions for stages ([fc63978](https://github.com/shashank-mishra-appdev/semantic-version/commit/fc63978cd5e195c1ed9bf03de5e5bf5b3a496ada))
+* resolved merge conflicts ([508a176](https://github.com/shashank-mishra-appdev/semantic-version/commit/508a1768c56ea772da7bbcfd35da76c73aedf8f1))
+* updated build command option ([68a04d9](https://github.com/shashank-mishra-appdev/semantic-version/commit/68a04d976e8e342b982e4f596d084c8fc4b0f423))
+* updated node version for pipeline ([112a670](https://github.com/shashank-mishra-appdev/semantic-version/commit/112a67087d3b33bb60ad7d785dc6250fddf35c7a))
+* updated yaml release pipeline condition ([bfb21ef](https://github.com/shashank-mishra-appdev/semantic-version/commit/bfb21ef66431a96aa35027d911794de942b18550))
+
 ## [1.0.1](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.0.0...v1.0.1) (2024-02-20)
 
 
