@@ -24,6 +24,14 @@ stages:
               npm install
               ng build --configuration production
             displayName: Angular Build
+          - script: |
+              npm run release:semantic-release
+            displayName: Semantic Release
+          - script: echo $(nextRelease)
+            displayName: 'Show next version'
+            env:
+              GH_TOKEN: $(gitToken)
+              GITHUB_TOKEN: $(gitToken)
   - stage: Dev
     displayName: Deploy to the dev environment
     dependsOn: Build
