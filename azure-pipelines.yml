@@ -30,7 +30,7 @@ stages:
             env:
               GH_TOKEN: $(gitToken)
               GITHUB_TOKEN: $(gitToken)
-          - script: echo $(nextRelease)
+          - script: echo $(version)
             displayName: 'Show next version'
   - stage: Dev
     displayName: Deploy to the dev environment
@@ -74,4 +74,5 @@ stages:
               npm install
               ng build --configuration production
             displayName: npm install and build
-
+name: $(version)
+appendCommitMessageToRunName: false
