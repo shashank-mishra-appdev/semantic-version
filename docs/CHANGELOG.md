@@ -1,3 +1,12 @@
+## [1.4.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.3.0...v1.4.0) (2024-03-10)
+
+
+### Features
+
+* added console for debugging ([d90f5a6](https://github.com/shashank-mishra-appdev/semantic-version/commit/d90f5a643d111f7bbc98e7f96037d60043f7474a))
+* updated bash task ([c60da35](https://github.com/shashank-mishra-appdev/semantic-version/commit/c60da35d6f7476e7efebbff896bb3ff38b619802))
+* updated semantic ado variale ([505e548](https://github.com/shashank-mishra-appdev/semantic-version/commit/505e548acf0908782ddde6c539164cf1c53897c9))
+
 ## [1.3.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.2.0...v1.3.0) (2024-03-05)
 
 
