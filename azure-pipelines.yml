@@ -30,7 +30,8 @@ stages:
             env:
               GH_TOKEN: $(gitToken)
               GITHUB_TOKEN: $(gitToken)
-          - script: echo $(version)
+          - bash: |
+              echo $(version)
             displayName: 'Show next version'
   - stage: Dev
     displayName: Deploy to the dev environment
