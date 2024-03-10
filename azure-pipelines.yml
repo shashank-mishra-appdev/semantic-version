@@ -30,9 +30,7 @@ stages:
             env:
               GH_TOKEN: $(gitToken)
               GITHUB_TOKEN: $(gitToken)
-          - bash: |
-              echo $(version)
-              echo "Semantic Release"
+          - script: echo $(nextRelease)
             displayName: 'Show next version'
   - stage: Dev
     displayName: Deploy to the dev environment

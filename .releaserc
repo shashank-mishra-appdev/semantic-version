@@ -32,13 +32,6 @@
       }
     ],
     "@semantic-release/github",
-    [
-      "semantic-release-ado",
-      {
-        "varName": "version",
-        "setOnlyOnRelease": false,
-        "isOutput": true
-      }
-    ]
+    "semantic-release-ado"
   ]
 }
