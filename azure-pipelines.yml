@@ -32,6 +32,7 @@ stages:
               GITHUB_TOKEN: $(gitToken)
           - bash: |
               echo $(version)
+              echo "Semantic Release"
             displayName: 'Show next version'
   - stage: Dev
     displayName: Deploy to the dev environment
