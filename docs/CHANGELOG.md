@@ -1,3 +1,10 @@
+## [1.5.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.4.0...v1.5.0) (2024-03-10)
+
+
+### Features
+
+* updated ado plugin in releaserc file ([f952647](https://github.com/shashank-mishra-appdev/semantic-version/commit/f952647621755706868ee485418903e30da1af01))
+
 ## [1.4.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.3.0...v1.4.0) (2024-03-10)
 
 
