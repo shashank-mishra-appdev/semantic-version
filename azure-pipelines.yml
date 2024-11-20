@@ -49,6 +49,7 @@ stages:
               versionSpec: 20.x
             displayName: Install Node.js
           - script: |
+              echo $(nextRelease)
               npm install -g @angular/cli
               npm install
               ng build --configuration production
@@ -70,6 +71,7 @@ stages:
               versionSpec: 20.x
             displayName: Install Node.js
           - script: |
+              echo $(nextRelease)
               npm install -g @angular/cli
               npm install
               ng build --configuration production
