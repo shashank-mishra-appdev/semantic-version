@@ -38,9 +38,6 @@ stages:
   - stage: Dev
     displayName: Deploy to the dev environment
     dependsOn: Build
-    variables:
-      nextReleaseVersion: $[ dependencies.Build.outputs['BuildJob.nextReleaseVersion'] ]
-      testVaribale: $[ dependencies.Build.outputs['BuildJob.testVaribale'] ]
     condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
     jobs:
       - deployment: Deploy
@@ -49,6 +46,9 @@ stages:
         displayName: Deploy to Dev
         pool:
           vmImage: ubuntu-latest
+        variables:
+          nextReleaseVersion: $[ dependencies.Build.outputs['BuildJob.nextReleaseVersion'] ]
+          testVaribale: $[ dependencies.Build.outputs['BuildJob.testVaribale'] ]
         steps:
           - task: NodeTool@0
             inputs:
