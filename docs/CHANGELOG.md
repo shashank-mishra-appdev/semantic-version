@@ -1,3 +1,10 @@
+## [1.6.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.5.0...v1.6.0) (2024-11-20)
+
+
+### Features
+
+* used version number in depploy steps ([efb261a](https://github.com/shashank-mishra-appdev/semantic-version/commit/efb261a78e47f5ff0c2fe79da0054314f89360b9))
+
 ## [1.5.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.4.0...v1.5.0) (2024-03-10)
 
 
