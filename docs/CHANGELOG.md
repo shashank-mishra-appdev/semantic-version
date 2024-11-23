@@ -1,3 +1,10 @@
+## [1.8.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.7.0...v1.8.0) (2024-11-23)
+
+
+### Features
+
+* added dummy variable with static value ([aed7feb](https://github.com/shashank-mishra-appdev/semantic-version/commit/aed7febbd76a7dd6b0f466a01e65b6818b212ba2))
+
 ## [1.7.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.6.0...v1.7.0) (2024-11-23)
 
 
