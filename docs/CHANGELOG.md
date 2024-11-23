@@ -1,3 +1,10 @@
+## [1.7.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.6.0...v1.7.0) (2024-11-23)
+
+
+### Features
+
+* set output variable for dependent stages ([778716b](https://github.com/shashank-mishra-appdev/semantic-version/commit/778716bf6303bd9c2a648d3c2e662753e290edff))
+
 ## [1.6.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.5.0...v1.6.0) (2024-11-20)
 
 
