@@ -1,3 +1,10 @@
+## [1.9.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.8.0...v1.9.0) (2024-11-23)
+
+
+### Features
+
+* reorder variable creation step ([012c996](https://github.com/shashank-mishra-appdev/semantic-version/commit/012c9969ccceaaf9fb94ad57b25c2696fc728a6a))
+
 ## [1.8.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.7.0...v1.8.0) (2024-11-23)
 
 
