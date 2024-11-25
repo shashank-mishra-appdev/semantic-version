@@ -1,3 +1,11 @@
+## [1.11.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.10.0...v1.11.0) (2024-11-25)
+
+
+### Features
+
+* fixed pacakge install command ([dcec961](https://github.com/shashank-mishra-appdev/semantic-version/commit/dcec96127785b4db27237107740ffe88b7aea395))
+* fixed typo ([673ea35](https://github.com/shashank-mishra-appdev/semantic-version/commit/673ea35f44197c5930eb908b050e9e792c5b71cf))
+
 ## [1.10.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.9.0...v1.10.0) (2024-11-25)
 
 
