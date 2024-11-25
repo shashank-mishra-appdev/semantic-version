@@ -1,3 +1,10 @@
+## [1.12.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.11.0...v1.12.0) (2024-11-25)
+
+
+### Features
+
+* fixed stage dependencies ([a584870](https://github.com/shashank-mishra-appdev/semantic-version/commit/a584870fcddbf188660ff50be99f014c135a458a))
+
 ## [1.11.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.10.0...v1.11.0) (2024-11-25)
 
 
