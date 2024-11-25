@@ -32,8 +32,7 @@ stages:
               GITHUB_TOKEN: $(gitToken)
           - script: |
               echo $(nextRelease)
-              echo "##vso[task.setvariable variable=nextReleaseVersion;isOutput=true]$(nextRelease)"
-              echo "##vso[task.setvariable variable=testVaribale;isOutput=true]Test Value"
+              echo "##vso[task.setvariable variable=testVariable;isOutput=true]Test Value"
             displayName: 'Show next version'
   - stage: Dev
     displayName: Deploy to the dev environment
@@ -47,17 +46,14 @@ stages:
         pool:
           vmImage: ubuntu-latest
         variables:
-          nextReleaseVersion: $[ dependencies.Build.outputs['BuildJob.nextReleaseVersion'] ]
-          testVaribale: $[ dependencies.Build.outputs['BuildJob.testVaribale'] ]
+          testVaribale: $[ dependencies.Build.outputs['BuildJob.testVariable'] ]
         steps:
           - task: NodeTool@0
             inputs:
               versionSpec: 20.x
             displayName: Install Node.js
           - script: |
-              echo $(nextReleaseVersion)
-              echo $(testVaribale)
-              echo "##vso[task.setvariable variable=nextReleaseVersion;isOutput=true]$(nextReleaseVersion)"
+              echo $(testVariable)
             displayName: Display next release version
           - script: |
               npm install -g @angular/cli
