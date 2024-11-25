@@ -20,9 +20,10 @@ stages:
               versionSpec: 20.x
             displayName: Install Node.js
           - script: |
-              npm install -g @angular/cli
+              echo "Build Commands Executed"
+              # npm install -g @angular/cli
               npm install
-              ng build --configuration production
+              # ng build --configuration production
             displayName: Angular Build
           - script: |
               npm run release:semantic-release
@@ -46,19 +47,20 @@ stages:
         pool:
           vmImage: ubuntu-latest
         variables:
-          testVaribale: $[ dependencies.Build.outputs['BuildJob.testVariable'] ]
+          testVariable: $[ dependencies.Build.outputs['BuildJob.testVariable'] ]
         steps:
           - task: NodeTool@0
             inputs:
               versionSpec: 20.x
             displayName: Install Node.js
           - script: |
-              echo $(testVariable)
+              echo "Output Variable $(testVariable)"
             displayName: Display next release version
           - script: |
-              npm install -g @angular/cli
+              echo "Build Commands Executed"
+              # npm install -g @angular/cli
               npm install
-              ng build --configuration production
+              # ng build --configuration production
             displayName: Angular Build
   - stage: Staging
     displayName: Deploy to the staging environment
