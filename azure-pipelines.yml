@@ -33,9 +33,10 @@ stages:
               GITHUB_TOKEN: $(gitToken)
           - script: |
               echo $(nextRelease)
-          - bash: echo "##vso[task.setvariable variable=testVariable;isOutput=true]this is a stage output variable"
-            name: MyOutputVar
             displayName: 'Show next version'
+          - bash: echo "##vso[task.setvariable variable=testVariable;isOutput=true]$(nextRelease)"
+            name: MyOutputVar
+            displayName: 'Set output variable'
   - stage: Dev
     displayName: Deploy to the dev environment
     dependsOn: Build
@@ -58,11 +59,9 @@ stages:
               echo "Output Variable $(testVariable)"
             displayName: Display next release version
           - script: |
-              echo "Build Commands Executed"
               # npm install -g @angular/cli
               npm install
               # ng build --configuration production
-          - bash: echo $(testVariable)
             displayName: Angular Build
   - stage: Staging
     displayName: Deploy to the staging environment
