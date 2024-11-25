@@ -1,3 +1,10 @@
+## [1.14.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.13.0...v1.14.0) (2024-11-25)
+
+
+### Features
+
+* used dynamic value for version ([03a0e04](https://github.com/shashank-mishra-appdev/semantic-version/commit/03a0e0464127bdef5c911dff7db9796d4bbc2e0d))
+
 ## [1.13.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.12.0...v1.13.0) (2024-11-25)
 
 
