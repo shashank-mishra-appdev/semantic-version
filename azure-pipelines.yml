@@ -22,7 +22,7 @@ stages:
           - script: |
               echo "Build Commands Executed"
               # npm install -g @angular/cli
-              # npm install
+              npm install
               # ng build --configuration production
             displayName: Angular Build
           - script: |
@@ -59,7 +59,7 @@ stages:
           - script: |
               echo "Build Commands Executed"
               # npm install -g @angular/cli
-              # npm install
+              npm install
               # ng build --configuration production
             displayName: Angular Build
   - stage: Staging
