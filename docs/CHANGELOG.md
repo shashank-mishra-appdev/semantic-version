@@ -1,3 +1,10 @@
+## [1.10.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.9.0...v1.10.0) (2024-11-25)
+
+
+### Features
+
+* removed dynamic variable reference ([6665649](https://github.com/shashank-mishra-appdev/semantic-version/commit/66656492e9ba94267196753c1ee44ffc51ac2c42))
+
 ## [1.9.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.8.0...v1.9.0) (2024-11-23)
 
 
