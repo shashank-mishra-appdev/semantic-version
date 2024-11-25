@@ -1,3 +1,10 @@
+## [1.13.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.12.0...v1.13.0) (2024-11-25)
+
+
+### Features
+
+* fixed azure yaml syntax ([596fca4](https://github.com/shashank-mishra-appdev/semantic-version/commit/596fca4c55510c5f90570554b5b4f5b11b437522))
+
 ## [1.12.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.11.0...v1.12.0) (2024-11-25)
 
 
