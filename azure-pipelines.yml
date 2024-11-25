@@ -47,7 +47,7 @@ stages:
         pool:
           vmImage: ubuntu-latest
         variables:
-          testVariable: $[ dependencies.Build.outputs['BuildJob.testVariable'] ]
+          testVariable: $[ stageDependencies.Build.outputs['BuildJob.testVariable'] ]
         steps:
           - task: NodeTool@0
             inputs:
