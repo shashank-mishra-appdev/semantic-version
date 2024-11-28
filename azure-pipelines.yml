@@ -20,11 +20,9 @@ stages:
               versionSpec: 20.x
             displayName: Install Node.js
           - script: |
-              echo "Build Commands Executed"
-              # npm install -g @angular/cli
               npm install
-              # ng build --configuration production
-            displayName: Angular Build
+              npm run build
+            displayName: Build Artifacts
           - script: |
               npm run release:semantic-release
             displayName: Semantic Release
@@ -34,7 +32,7 @@ stages:
           - script: |
               echo $(nextRelease)
             displayName: 'Show next version'
-          - bash: echo "##vso[task.setvariable variable=testVariable;isOutput=true]$(nextRelease)"
+          - bash: echo "##vso[task.setvariable variable=nextReleaseVersion;isOutput=true]$(nextRelease)"
             name: MyOutputVar
             displayName: 'Set output variable'
   - stage: Dev
@@ -49,20 +47,22 @@ stages:
         pool:
           vmImage: ubuntu-latest
         variables:
-          testVariable: $[stageDependencies.Build.BuildJob.outputs['MyOutputVar.testVariable']]
+          nextReleaseVersion: $[stageDependencies.Build.BuildJob.outputs['MyOutputVar.nextReleaseVersion']]
         steps:
           - task: NodeTool@0
             inputs:
               versionSpec: 20.x
             displayName: Install Node.js
           - script: |
-              echo "Output Variable $(testVariable)"
+              echo "Output Variable $(nextReleaseVersion)"
             displayName: Display next release version
           - script: |
-              # npm install -g @angular/cli
               npm install
-              # ng build --configuration production
-            displayName: Angular Build
+              npm run build 
+            displayName: Build Artifacts
+          - bash: echo "##vso[task.setvariable variable=nextReleaseVersion;isOutput=true]$(nextReleaseVersion)"
+            name: MyOutputVar
+            displayName: 'Set output variable'
   - stage: Staging
     displayName: Deploy to the staging environment
     dependsOn: Dev
@@ -71,7 +71,7 @@ stages:
     condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
     jobs:
       - deployment: Deploy
-        environment: dev
+        environment: stage
       - job: Build
         displayName: Build job
         pool:
@@ -82,7 +82,9 @@ stages:
               versionSpec: 20.x
             displayName: Install Node.js
           - script: |
-              echo $(nextReleaseVersion)
+              echo "Output Variable $(nextReleaseVersion)"
+            displayName: Display next release version
+          - script: |
               npm install -g @angular/cli
               npm install
               ng build --configuration production
