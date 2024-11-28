@@ -1,3 +1,10 @@
+## [1.16.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.15.0...v1.16.0) (2024-11-28)
+
+
+### Features
+
+* fixed stage environment variable ([6592175](https://github.com/shashank-mishra-appdev/semantic-version/commit/6592175e04c6c38e1e667542c67d84b086f44b60))
+
 ## [1.15.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.14.0...v1.15.0) (2024-11-28)
 
 
