@@ -66,8 +66,6 @@ stages:
   - stage: Staging
     displayName: Deploy to the staging environment
     dependsOn: Dev
-    variables:
-      nextReleaseVersion: $[ dependencies.Dev.outputs['DevBuildJob.nextReleaseVersion'] ]
     condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
     jobs:
       - deployment: Deploy
@@ -76,6 +74,8 @@ stages:
         displayName: Build job
         pool:
           vmImage: ubuntu-latest
+        variables:
+          nextReleaseVersion: $[stageDependencies.Dev.DevBuildJob.outputs['MyOutputVar.nextReleaseVersion']]
         steps:
           - task: NodeTool@0
             inputs:
