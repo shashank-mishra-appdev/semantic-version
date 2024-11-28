@@ -1,3 +1,10 @@
+## [1.15.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.14.0...v1.15.0) (2024-11-28)
+
+
+### Features
+
+* used stage environment for deployment ([4e80906](https://github.com/shashank-mishra-appdev/semantic-version/commit/4e80906fbe5028b507e5d34dc9ea43427145f4d7))
+
 ## [1.14.0](https://github.com/shashank-mishra-appdev/semantic-version/compare/v1.13.0...v1.14.0) (2024-11-25)
 
 
